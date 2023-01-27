@@ -1,0 +1,42 @@
+<!- programa.html ->
+<meta charset="UTF-8">
+
+<script>
+
+    // função para pular minha
+    function pulaLinha()
+    {
+        document.write("<br>");
+    }
+
+    // função para mostrar na página
+    function mostra(texto)
+    {
+        document.write(texto);
+        pulaLinha();
+    }
+
+    // declarando o ano vigente
+    var ano =  2023;
+    // declarando os anos de nascimento
+    var anoNasc1=  1977;
+    var anoNasc2 =  1995;
+    var anoNasc3 =  1976;
+    // idades
+    var idade1 = ano - anoNasc1;
+    var idade2 = ano - anoNasc2;
+    var idade3 = ano - anoNasc3;
+    // primeiro nome
+    var nome1 = "Flávio";
+    var nome2 = "Joaquim";
+    var nome3 = "Barney";
+
+    mostra(nome1+" tem " + idade1+ " anos.");
+    mostra(nome2+" tem " + idade2+ " anos.");
+    mostra(nome3+" tem " + idade3+ " anos.");
+    pulaLinha()
+    // calculando a média das idades
+    var media = (idade1+idade2+idade3)/3
+    mostra("A média das idades é de " + Math.round(media)+ " anos.")
+    
+</script>

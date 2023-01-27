@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Compare com o meu segredo</button>
+<script>
+	var segredo = Math.round(Math.random()*10);
+	var input = document.querySelector("input");
+	// foco na caixa
+	input.focus();
+	function verifica()
+	{
+		if(input.value == segredo)
+		{
+			alert("acertou.");
+		}else
+		{
+			alert("errou.");
+		}
+		// limpando o campo
+		input.value="";
+		// foco na caixa
+		input.focus();
+	}
+
+	var button = document.querySelector("button");
+	button.onclick = verifica; // não se clica no botão, é excecutado a função verifica
+	// atenção, não pode colocar verifica(), pois assim a função é chamada no momento que atribui a função ao botão e não quando o botão é clicado.
+
+
+
+
+
+</script>

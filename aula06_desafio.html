@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() 
+    {
+        document.write("<br>");
+        document.write("<br>");
+    }
+    function mostra(frase) 
+    {
+        document.write(frase);
+        pulaLinha();
+    }
+    function sorteia(numero) 
+    {
+        return Math.round(Math.random()*numero);
+    }
+
+
+    var numeroPensado = sorteia(parseInt(prompt("Digite um número para a geração do número aleatório.")));
+    console.log(numeroPensado);
+    var chute = parseInt(prompt("Chute um número."));
+
+    if(chute == numeroPensado)
+    {
+        mostra("Você acertou!");
+    }
+        else
+        {
+            if(chute > numeroPensado)
+            {
+                mostra("Você errou, o número pensado foi menor que "+chute+"!");
+            }else
+            {
+                mostra("Você errou, o número pensado foi maior que "+chute+"!");
+            }
+        }
+
+
+</script>
